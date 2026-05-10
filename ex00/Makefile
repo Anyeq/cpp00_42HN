@@ -6,7 +6,22 @@
 #    By: asando <asando@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/10 14:35:19 by asando            #+#    #+#              #
-#    Updated: 2026/05/10 14:35:21 by asando           ###   ########.fr        #
+#    Updated: 2026/05/10 16:23:15 by asando           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+CC := c++
+CFLAGS := -Wall -Werror -Wextra
+SRC_DIR := ./src
+OBJ_DIR := ./obj
+
+GREEN := \033[1;32m
+RED := \033[1;31m
+BLUE := \033[1;34m
+RESET := \033[0m
+
+OK := ✔
+FAIL := ✖
+ARROW := ➜
+
+SRCS := megaphone.cpp
