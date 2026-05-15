@@ -6,7 +6,7 @@
 /*   By: asando <asando@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/14 15:23:24 by asando            #+#    #+#             */
-/*   Updated: 2026/05/14 15:53:01 by asando           ###   ########.fr       */
+/*   Updated: 2026/05/15 13:21:10 by asando           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,18 @@ class	Contact{
 		std::string _nickName;
 		std::string	_phoneNumber;
 		std::string	_darkestSecret;
+
 	public:
 		void	setFirstName(const std::string &str);
 		void	setLastName(const std::string &str);
 		void	setNickName(const std::string &str);
 		void	setPhoneNumber(const std::string &str);
 		void	setDarkestSecret(const std::string &str);
+
+		std::string	getFirstName(void) const;
+		std::string	getLastName(void) const;
+		std::string	getNickName(void) const;
+		std::string	getPhoneNumbert(void) const;
+		std::string	getDarkestSecret(void) const;
 };
 #endif
