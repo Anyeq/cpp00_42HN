@@ -6,7 +6,7 @@
 /*   By: asando <asando@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/14 15:12:29 by asando            #+#    #+#             */
-/*   Updated: 2026/05/15 13:38:44 by asando           ###   ########.fr       */
+/*   Updated: 2026/05/17 15:58:51 by asando           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ class	PhoneBook {
 	private:
 		Contact	contacts[8];
 		int	index;
+		int	count;
 	public:
 		PhoneBook();
 		void	addContact();

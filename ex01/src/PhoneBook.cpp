@@ -6,13 +6,22 @@
 /*   By: asando <asando@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 13:30:46 by asando            #+#    #+#             */
-/*   Updated: 2026/05/15 13:43:02 by asando           ###   ########.fr       */
+/*   Updated: 2026/05/17 16:54:25 by asando           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.cpp"
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook() : index(0){}
+static std::string	formatOutput(const std::string &s) {
+	if (s.length() > 10)
+		return (s.substr(0, 9) + ".");
+	return (std::string ((10 - s.length(), ' ') + s));
+}
+
+PhoneBook::PhoneBook() : index(0), count(0) {}
 
 void	PhoneBook::addContact() {
 	std::string	input;
@@ -38,4 +47,23 @@ void	PhoneBook::addContact() {
 	contacts[index].setDarkestSecret(input);
 
 	index = (index + 1) % 8;
+	if (count < 8)
+		count++;
+
+	std::cout << "Contact added!" << std::endl;
+}
+
+void	PhoneBook::printTable() const {
+	std::cout << "|-------------------------------------------|" << std::endl;
+	std::cout << "|   Index  |First Name| Last Name| Nick Name|" << std::endl;
+	std::cout << "|-------------------------------------------|" << std::endl;
+
+	for (int i = 0; i < count; i++) {
+		std::cout << "|" << std::setw(10) << i
+				  << "|" << formatOutput(contacts[i].getFirstName())
+				  << "|" << formatOutput(contacts[i].getLastName())
+				  << "|" << formatOutput(contacts[i].getNickName()) << std::endl;
+	}
+
+	std::cout << "|-------------------------------------------|" << std::endl;
 }
