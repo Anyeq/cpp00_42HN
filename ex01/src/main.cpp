@@ -6,7 +6,7 @@
 /*   By: asando <asando@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/10 16:24:50 by asando            #+#    #+#             */
-/*   Updated: 2026/05/17 20:43:57 by asando           ###   ########.fr       */
+/*   Updated: 2026/05/17 21:01:15 by asando           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main(void) {
 		} else if (cmd == "SEARCH") {
 			phonebook.searchContact();
 		} else if (cmd == "EXIT") {
-			std::cout << "Goodbye!" << std::endl;
+			std::cout << "Exited!" << std::endl;
 			break ;
 		} else {
 			std::cout << "Unknown command." << std::endl;
