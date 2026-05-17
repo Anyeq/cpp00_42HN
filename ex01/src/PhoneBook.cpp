@@ -6,7 +6,7 @@
 /*   By: asando <asando@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 13:30:46 by asando            #+#    #+#             */
-/*   Updated: 2026/05/17 16:54:25 by asando           ###   ########.fr       */
+/*   Updated: 2026/05/17 17:07:30 by asando           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,37 @@ void	PhoneBook::printTable() const {
 	}
 
 	std::cout << "|-------------------------------------------|" << std::endl;
+}
+
+void	PhoneBook::searchContact() const {
+	if (count == 0) {
+		std::cout << "PhoneBook is empty." std::endl;
+		return ;
+	}
+
+	printTable();
+
+	std::string	input;
+	std::cout << "Enter Index: ";
+	std::getline(std::cin, input);
+
+	for (size_t i = 0; i < input.length(), i++) {
+		if (!std::isdigit(input[i])) {
+			std::cout << "Invalid index." << std::endl;
+			return ;
+		}
+	}
+
+	int	idx = std::stoi(input);
+
+	if (idx < 0 || idx >= count) {
+		std::cout << "Index out of range." << std::endl;
+		return ;
+	}
+
+	std::cout << "First name: " << contacts[idx].getFirst() << std::endl;
+	std::cout << "Last name: " << contacts[idx].getLast() << std::endl;
+	std::cout << "Nickname: " << contacts[idx].getNick() << std::endl;
+	std::cout << "Phone number: " << contacts[idx].getPhone() << std::endl;
+	std::cout << "Darkest secret: " << contacts[idx].getSecret() << std::endl;
 }
