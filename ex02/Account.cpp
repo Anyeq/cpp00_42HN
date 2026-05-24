@@ -6,7 +6,7 @@
 /*   By: asando <asando@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 21:22:43 by asando            #+#    #+#             */
-/*   Updated: 2026/05/24 20:56:28 by asando           ###   ########.fr       */
+/*   Updated: 2026/05/24 21:14:46 by asando           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,27 @@ Account::Account(int initial_deposit)
 {
 	_nbAccounts++;
 	_totalAmount += initial_deposit;
-
 	_displayTimestamp();
-	
 	std::cout << "index:" << _accountIndex
 		<< ";amount:" << _amount
 		<< ";created:" << std::endl;
 }
 
+Account::~Account() {
+	_displatTimestamp();
+	std::cout << "index:" << _accountIndex
+		<< ";amount:" << _amount
+		<< ";created:" << std::endl;
+}
+
+void	Account::_displayTimestamp() {
+	std::time_t now = std::time(NULL);
+	std::tm *t = std::localtime(&now);
+	std::cout << "[" << (t->tm_year + 1900)
+		<< std::setw(2) << std::setfill('0') <<t->tm_mon + 1
+		<< std::setw(2) << t->tm_day << "_"
+		<< std::setw(2) << t->tm_hour
+		<< std::setw(2) << t->tm_min
+		<< std::setw(2) << t->tm_sec
+		<< "] ";
+}
