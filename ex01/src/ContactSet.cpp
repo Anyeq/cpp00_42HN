@@ -6,7 +6,7 @@
 /*   By: asando <asando@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/14 15:49:34 by asando            #+#    #+#             */
-/*   Updated: 2026/05/17 20:45:19 by asando           ###   ########.fr       */
+/*   Updated: 2026/05/25 18:16:58 by asando           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ void	Contact::setPhoneNumber(const std::string &str) {
 	this->_phoneNumber = str;
 }
 
-void	Contact::darkestSecret(const std::string &str) {
+void	Contact::setDarkestSecret(const std::string &str) {
 	this->_darkestSecret= str;
 }

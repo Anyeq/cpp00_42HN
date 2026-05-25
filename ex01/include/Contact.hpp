@@ -6,7 +6,7 @@
 /*   By: asando <asando@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/14 15:23:24 by asando            #+#    #+#             */
-/*   Updated: 2026/05/17 20:51:40 by asando           ###   ########.fr       */
+/*   Updated: 2026/05/25 18:16:02 by asando           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class	Contact{
 		std::string	getFirstName(void) const;
 		std::string	getLastName(void) const;
 		std::string	getNickName(void) const;
-		std::string	getPhoneNumbert(void) const;
+		std::string	getPhoneNumber(void) const;
 		std::string	getDarkestSecret(void) const;
 };
 #endif

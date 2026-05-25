@@ -6,7 +6,7 @@
 /*   By: asando <asando@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 13:30:46 by asando            #+#    #+#             */
-/*   Updated: 2026/05/17 21:00:40 by asando           ###   ########.fr       */
+/*   Updated: 2026/05/25 18:34:02 by asando           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 static std::string	formatOutput(const std::string &s) {
 	if (s.length() > 10)
 		return (s.substr(0, 9) + ".");
-	return (std::string ((10 - s.length(), ' ') + s));
+	return (std::string(10 - s.length(), ' ') + s);
 }
 
 PhoneBook::PhoneBook() : index(0), count(0) {}
@@ -26,23 +26,23 @@ PhoneBook::PhoneBook() : index(0), count(0) {}
 void	PhoneBook::addContact() {
 	std::string	input;
 
-	std::cout << "First Name";
+	std::cout << "First Name: ";
 	std::getline(std::cin, input);
 	contacts[index].setFirstName(input);
 	
-	std::cout << "Last Name";
+	std::cout << "Last Name: ";
 	std::getline(std::cin, input);
-	contacts[index].setLasttName(input);
+	contacts[index].setLastName(input);
 
-	std::cout << "Nick Name";
+	std::cout << "Nick Name: ";
 	std::getline(std::cin, input);
 	contacts[index].setNickName(input);
 
-	std::cout << "Phone Number";
+	std::cout << "Phone Number: ";
 	std::getline(std::cin, input);
 	contacts[index].setPhoneNumber(input);
 
-	std::cout << "Darkest Secret";
+	std::cout << "Darkest Secret: ";
 	std::getline(std::cin, input);
 	contacts[index].setDarkestSecret(input);
 
@@ -70,7 +70,7 @@ void	PhoneBook::printTable() const {
 
 void	PhoneBook::searchContact() const {
 	if (count == 0) {
-		std::cout << "PhoneBook is empty." std::endl;
+		std::cout << "PhoneBook is empty." << std::endl;
 		return ;
 	}
 	printTable();
@@ -79,7 +79,7 @@ void	PhoneBook::searchContact() const {
 
 	std::cout << "Enter Index: ";
 	std::getline(std::cin, input);
-	for (size_t i = 0; i < input.length(), i++) {
+	for (size_t i = 0; i < input.length(); i++) {
 		if (!std::isdigit(input[i])) {
 			std::cout << "Invalid index." << std::endl;
 			return ;
