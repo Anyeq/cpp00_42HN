@@ -6,7 +6,7 @@
 /*   By: asando <asando@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 21:22:43 by asando            #+#    #+#             */
-/*   Updated: 2026/05/24 23:15:25 by asando           ###   ########.fr       */
+/*   Updated: 2026/05/25 11:06:32 by asando           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,4 +90,27 @@ void	Account::makeDeposit(int deposit) {
 		<< ";amount:" << _nbDeposit
 		<< ";nb_deposits:" << _nbDeposits
 		<< std:endl;
+}
+
+bool	Account::makeWithdrawals(int withdrawal) {
+	_displayTimestamp();
+
+	std::cout << "index:" << _accountIndex
+		<< ";p_amount:" << _amount;
+
+	if (withdrawal > _amount) {
+		std::cout << ";withdrawal:refused" << std::endl;
+		return false;
+	}
+	_amount -= withdrawal;
+	_nbWithdrawals++;
+	_totalAmount -= withdrawal;
+	_totalNbWithdrawals++;
+
+	std::cout << ";withdrawal:" << withdrawal
+		<< ";amount:" <<_amount
+		<< ";nb_withdrawals:" << _nbWithdrawals
+		<< std::endl;
+
+	return true;
 }
