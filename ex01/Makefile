@@ -6,12 +6,13 @@
 #    By: asando <asando@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/10 16:24:23 by asando            #+#    #+#              #
-#    Updated: 2026/05/25 18:25:26 by asando           ###   ########.fr        #
+#    Updated: 2026/05/25 22:27:17 by asando           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := g++
-CFLAGS := -Wall -Wextra -Werror
+CPP_STD := c++98
+CFLAGS := -Wall -Wextra -Werror -std=$(CPP_STD)
 INCLUDE := ./include
 
 SRC_DIR := ./src

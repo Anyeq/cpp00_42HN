@@ -6,12 +6,13 @@
 #    By: asando <asando@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/17 21:04:05 by asando            #+#    #+#              #
-#    Updated: 2026/05/25 22:19:40 by asando           ###   ########.fr        #
+#    Updated: 2026/05/25 22:26:26 by asando           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := g++
-CFLAGS := -Werror -Wextra -Wall -std=c++98
+CPP_STD := c++98
+CFLAGS := -Werror -Wextra -Wall -std=$(CPP_STD)
 INCLUDE := .
 
 OBJ_DIR := ./obj

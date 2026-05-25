@@ -6,12 +6,13 @@
 #    By: asando <asando@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/10 14:35:19 by asando            #+#    #+#              #
-#    Updated: 2026/05/25 18:55:19 by asando           ###   ########.fr        #
+#    Updated: 2026/05/25 22:27:29 by asando           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := g++
-CFLAGS := -Wall -Werror -Wextra
+CPP_STD := c++98
+CFLAGS := -Wall -Wextra -Werror -std=$(CPP_STD)
 SRC_DIR := .
 OBJ_DIR := ./obj
 
