@@ -6,7 +6,7 @@
 /*   By: asando <asando@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 13:30:46 by asando            #+#    #+#             */
-/*   Updated: 2026/05/25 18:55:18 by asando           ###   ########.fr       */
+/*   Updated: 2026/05/26 16:51:14 by asando           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	PhoneBook::printTable() const {
 		std::cout << "|" << std::setw(10) << i
 				  << "|" << formatOutput(contacts[i].getFirstName())
 				  << "|" << formatOutput(contacts[i].getLastName())
-				  << "|" << formatOutput(contacts[i].getNickName()) << std::endl;
+				  << "|" << formatOutput(contacts[i].getNickName()) << "|" << std::endl;
 	}
 
 	std::cout << "|-------------------------------------------|" << std::endl;
