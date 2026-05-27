@@ -6,7 +6,7 @@
 /*   By: asando <asando@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 13:30:46 by asando            #+#    #+#             */
-/*   Updated: 2026/05/26 16:51:14 by asando           ###   ########.fr       */
+/*   Updated: 2026/05/27 19:44:33 by asando           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,16 @@ static std::string	formatOutput(const std::string &s) {
 	if (s.length() > 10)
 		return (s.substr(0, 9) + ".");
 	return (std::string(10 - s.length(), ' ') + s);
+}
+
+int	ft_stoi(std::string &s) {
+	int	res;
+
+	res = 0;
+	for (size_t i = 0; i < s.length(); i++) {
+		res = res * 10 + (s[i] - '0');
+	}
+	return (res);
 }
 
 PhoneBook::PhoneBook() : index(0), count(0) {}
@@ -86,7 +96,7 @@ void	PhoneBook::searchContact() const {
 		}
 	}
 
-	int	idx = std::stoi(input);
+	int	idx = ft_stoi(input);
 
 	if (idx < 0 || idx >= count) {
 		std::cout << "Index out of range." << std::endl;

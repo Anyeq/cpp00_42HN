@@ -6,7 +6,7 @@
 /*   By: asando <asando@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 21:22:43 by asando            #+#    #+#             */
-/*   Updated: 2026/05/25 22:05:34 by asando           ###   ########.fr       */
+/*   Updated: 2026/05/27 20:09:15 by asando           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Account::Account(int initial_deposit)
 
 	std::cout << "index:" << _accountIndex
 		<< ";amount:" << _amount
-		<< ";created:" << std::endl;
+		<< ";created" << std::endl;
 }
 
 Account::~Account(void) {
@@ -40,7 +40,7 @@ Account::~Account(void) {
 
 	std::cout << "index:" << _accountIndex
 		<< ";amount:" << _amount
-		<< ";created:" << std::endl;
+		<< ";closed" << std::endl;
 }
 
 void	Account::_displayTimestamp(void) {
@@ -72,7 +72,7 @@ void	Account::displayStatus(void) const {
 	std::cout << "index:" << _accountIndex
 		<< ";amount:" << _amount
 		<< ";deposit:" << _nbDeposits
-		<< ";withdrawals" << _totalNbWithdrawals
+		<< ";withdrawals:" << _nbWithdrawals
 		<< std::endl;
 }
 
@@ -88,7 +88,7 @@ void	Account::makeDeposit(int deposit) {
 	_totalNbDeposits++;
 
 	std::cout << ";deposit:" << deposit
-		<< ";amount:" << _nbDeposits
+		<< ";amount:" << _amount
 		<< ";nb_deposits:" << _nbDeposits
 		<< std::endl;
 }

@@ -6,24 +6,24 @@
 #    By: asando <asando@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/10 14:35:19 by asando            #+#    #+#              #
-#    Updated: 2026/05/25 22:27:29 by asando           ###   ########.fr        #
+#    Updated: 2026/05/27 19:14:48 by asando           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC := g++
+CC := c++
 CPP_STD := c++98
 CFLAGS := -Wall -Wextra -Werror -std=$(CPP_STD)
 SRC_DIR := .
 OBJ_DIR := ./obj
 
-GREEN := \033[1;32m
-RED := \033[1;31m
-BLUE := \033[1;34m
-RESET := \033[0m
+# GREEN := \033[1;32m
+# RED := \033[1;31m
+# BLUE := \033[1;34m
+# RESET := \033[0m
 
-OK := ✔
-FAIL := ✖
-ARROW := ➜
+# OK := ✔
+# FAIL := ✖
+# ARROW := ➜
 
 SRCS := $(SRC_DIR)/megaphone.cpp
 OBJS := $(SRCS:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
